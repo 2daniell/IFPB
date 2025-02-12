@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 30px;
+            background-color: #ece1e1;
+            flex-direction: column;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 500px;
+            min-height: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <h2>Atividades</h2>
+        <p>Clique para ver o exercicio.</p>
+    </div>
+    <div class="container">
+    </div>
+
+    <script>
+
+        const cards = [
+            {
+                title: 'Conteudo Dinamico',
+                subject: 'Linguagem de Script',
+                linkTo: 'ls/dynamic-content/index.html'
+            },
+            {
+                title: "Requisição Assíncrona",
+                subject: 'Linguagem de Script',
+                linkTo: 'ls/asynchronous-request/index.html'
+            }
+        ]
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            cards.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card');
+                cardElement.addEventListener('click', () => {
+                    window.location.href = card.linkTo
+                })
+                cardElement.innerHTML = `
+                    <h2>${card.title}</h2>
+                    <p>${card.subject}</p>
+                `;
+                container.appendChild(cardElement);
+            });
+        })
+    </script>
+</body>
+</html>
