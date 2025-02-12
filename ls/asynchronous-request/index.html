@@ -3,9 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asynchronous Request</title>
+    <title>Buscar Por CEP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ece1e1;
+            flex-direction: column;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h3 {
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h3>Buscar Por CEP</h3>
+        <input type="text" id="cep" placeholder="Digite o CEP" maxlength="9">
+        <button id="search">Buscar</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const input = document.getElementById("cep");
+            const button = document.getElementById("search");
+            const result = document.getElementById("result");
+
+            button.addEventListener("click", () => {
+                const cep = input.value.trim();
+                
+                if (cep.length !== 8 || isNaN(cep)) {
+                    result.innerHTML = "<p style='color: red;'>CEP inválido! Digite um CEP válido com 8 números.</p>";
+                    return;
+                }
+
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Erro na requisição");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.erro) {
+                            result.innerHTML = "<p style='color: red;'>CEP não encontrado.</p>";
+                            return;
+                        }
+                        
+                        result.innerHTML = `
+                            <p><strong>CEP:</strong> ${data.cep}</p>
+                            <p><strong>Logradouro:</strong> ${data.logradouro}</p>
+                            <p><strong>Complemento:</strong> ${data.complemento || "Nenhum"}</p>
+                            <p><strong>Bairro:</strong> ${data.bairro}</p>
+                            <p><strong>Cidade:</strong> ${data.localidade}</p>
+                            <p><strong>UF:</strong> ${data.uf}</p>
+                            <p><strong>DDD:</strong> ${data.ddd}</p>
+                        `;
+                    })
+                    .catch(error => {
+                        result.innerHTML = "<p style='color: red;'>Erro ao buscar o CEP.</p>";
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
