@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="overflow-x-hidden scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="icon" href="./assets/ifpb.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="w-screen">
+        <nav class="absolute z-10 border-b-2 pt-1 sm:pt-4 w-full backdrop-blur bg-black">
+            <div class="flex items-center justify-between px-12 text-white w-full">
+                <div>
+                    <ul class="hidden sm:flex">
+                        <li class="cursor-pointer mx-5 text-lg font-semibold border-b-4 pb-3 border-transparent hover:border-red-600 transition-colors duration-300"><a href="index.html">Home</a></li>
+                        <li class="cursor-pointer mx-5 text-lg font-semibold border-b-4 pb-3 border-transparent hover:border-red-600 transition-colors duration-300"><a href="models.html">Modelos</a></li>
+                        <li class="cursor-pointer mx-5 text-lg font-semibold border-b-4 pb-3 border-transparent hover:border-red-600 transition-colors duration-300">Carrinho</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="flex">
+                        <li class="mx-2 text-3xl border-b-4 border-transparent hover:border-red-600 transition-colors duration-300">
+                            <a href=""><span class="material-icons">account_circle</span></a>
+                        </li>
+                        <li class="mx-2 text-3xl border-b-4 border-transparent hover:border-red-600 transition-colors duration-300">
+                            <a href="shopping.carts.html"><span class="material-icons">shopping_cart</span></a>
+                        </li>
+                        <li class="mx-2 text-3xl border-b-4 border-transparent hover:border-red-600 transition-colors duration-300">
+                            <a href=""><span class="material-icons">search</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 px-10">
+        <h1 class="text-3xl font-bold mb-4">Carrinho de Compras</h1>
+
+        <!-- Carrinho -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <!-- Cabeçalho do carrinho -->
+            <div class="grid grid-cols-6 font-semibold text-gray-700 border-b pb-4">
+                <div class="col-span-3">Produto</div>
+                <div class="text-center">Quantidade</div>
+                <div class="text-center">Preço Unitário</div>
+                <div class="text-center">Total</div>
+            </div>
+
+            <!-- Item 1 -->
+            <div class="grid grid-cols-6 items-center py-4 border-b">
+                <div class="col-span-3 flex items-center space-x-4">
+                    
+                    <p class="text-gray-700">Nome do Produto 1</p>
+                </div>
+                <div class="text-center">
+                    <input type="number" value="1" class="w-12 p-1 text-center border border-gray-300 rounded">
+                </div>
+                <div class="text-center text-gray-700">R$ 14.124.356,00</div>
+                <div class="text-center text-gray-700">R$ lOrem</div>
+                <div class="text-right">
+                    <button class="text-red-600 hover:text-red-800"><span class="material-icons">delete</span></button>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="grid grid-cols-6 items-center py-4 border-b">
+                <div class="col-span-3 flex items-center space-x-4">
+                    
+                    <p class="text-gray-700">Nome do Produto 2</p>
+                </div>
+                <div class="text-center">
+                    <input type="number" value="2" class="w-12 p-1 text-center border border-gray-300 rounded">
+                </div>
+                <div class="text-center text-gray-700">R$  3.245.100,00</div>
+                <div class="text-center text-gray-700">R$  lOrem</div>
+                <div class="text-right">
+                    <button class="text-red-600 hover:text-red-800"><span class="material-icons">delete</span></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-6 items-center py-4 border-b">
+                <div class="col-span-3 flex items-center space-x-4">
+                    
+                    <p class="text-gray-700">Nome do Produto 3</p>
+                </div>
+                <div class="text-center">
+                    <input type="number" value="2" class="w-12 p-1 text-center border border-gray-300 rounded">
+                </div>
+                <div class="text-center text-gray-700">R$  1.500.00,00</div>
+                <div class="text-center text-gray-700">R$  lOrem</div>
+                <div class="text-right">
+                    <button class="text-red-600 hover:text-red-800"><span class="material-icons">delete</span></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-6 items-center py-4 border-b">
+                <div class="col-span-3 flex items-center space-x-4">
+                    
+                    <p class="text-gray-700">Nome do Produto 4</p>
+                </div>
+                <div class="text-center">
+                    <input type="number" value="2" class="w-12 p-1 text-center border border-gray-300 rounded">
+                </div>
+                <div class="text-center text-gray-700">R$  12.140.00,00</div>
+                <div class="text-center text-gray-700">R$  lOrem</div>
+                <div class="text-right">
+                    <button class="text-red-600 hover:text-red-800"><span class="material-icons">delete</span></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-6 items-center py-4 border-b">
+                <div class="col-span-3 flex items-center space-x-4">
+                    
+                    <p class="text-gray-700">Nome do Produto 5</p>
+                </div>
+                <div class="text-center">
+                    <input type="number" value="2" class="w-12 p-1 text-center border border-gray-300 rounded">
+                </div>
+                <div class="text-center text-gray-700">R$ 16.333.444,00</div>
+                <div class="text-center text-gray-700">R$  lOrem</div>
+                <div class="text-right">
+                    <button class="text-red-600 hover:text-red-800"><span class="material-icons">delete</span></button>
+                </div>
+            </div>
+
+            <!-- Subtotal -->
+            <div class="grid grid-cols-6 items-center py-4">
+                <div class="col-span-4"></div>
+                <div class="text-right font-bold text-gray-700">Subtotal:</div>
+                <div class="text-center font-bold text-gray-700">R$ LOREM</div>
+            </div>
+
+            <!-- Ações do carrinho -->
+            <div class="flex justify-between mt-6">
+                <button class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-200">Continuar comprando</button>
+                <button class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-200">Finalizar compra</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-10 bg-black text-white py-4 w-full">
+        <div class="text-center">
+            <p>&copy; 2024 IFCAR. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

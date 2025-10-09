@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="overflow-x-hidden scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFCAR</title>
+    <link rel="icon" href="./assets/ifpb.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        .custom-gradient {
+            background: linear-gradient(to right, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 100%);
+        }
+
+                
+    </style>
+</head>
+<body>
+    <header class="w-screen">
+        
+        <nav class="absolute z-10 border-b-2 pt-1 sm:pt-4 w-full backdrop-blur">
+            <div class="flex items-center justify-between px-12 text-white w-full">
+
+                <div class="sm:hidden">
+                    <a href=""><span class="material-icons text-3xl focus:outline">menu</span></a>
+                </div>
+
+                <div>
+                    <ul class="hidden sm:flex">
+                        <li class="cursor-pointer mx-5 text-lg font-semibold border-b-4 pb-3 border-transparent hover:border-red-600 transition-colors duration-300">Home</li>
+                        <li class="cursor-pointer mx-5 text-lg font-semibold border-b-4 pb-3 border-transparent hover:border-red-600 transition-colors duration-300">Modelos</li>
+                        <li class="cursor-pointer mx-5 text-lg font-semibold border-b-4 pb-3 border-transparent hover:border-red-600 transition-colors duration-300">Contato</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="flex">
+                        <li class="mx-2 text-3xl border-b-4 border-transparent hover:border-red-600 transition-colors duration-300"><a href=""><span class="material-icons">account_circle</span></a></li>
+                        <li class="mx-2 text-3xl  border-b-4 border-transparent hover:border-red-600 transition-colors duration-300"><a href="shopping.carts.html"><span class="material-icons">shopping_cart</span></a></li>
+                        <li class="mx-2 text-3xl  border-b-4 border-transparent hover:border-red-600 transition-colors duration-300"><a href=""><span class="material-icons">search</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative w-full max-w-full">
+            <img src="./assets/porsche-bg.png" class="block w-full h-auto">
+            <div class="absolute top-0 left-0 flex w-full h-full items-center content-center text-white custom-gradient">
+                
+                <div class="flex flex-col px-4 sm:px-16">
+
+                    <h1 class="text-x sm:text-4xl lg:text-6xl font-bold">IFCAR</h1>
+                    <span class="text-sm sm:text-2xl lg:text-4xl font-semibold">Sua Porsche só aqui</span>
+                    <button class="p-1 sm:p-4 lg:p-6 font-semibold mt-2 rounded bg-red-600 transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Ver Modelos</button>
+
+                </div>
+            </div>
+        </div>   
+    </header>
+
+    <main>
+
+        <div class="flex justify-center items-center mb-8">
+            <div>
+                <div class="flex flex-col text-center py-6">
+                    <span>PROCURE E ADQUIRA</span>
+                    <span class="text-2xl">ENCONTRE A SUA PORSCHE</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-x-36 text-center">
+
+                    <div class="flex flex-col p-4">
+                        <span class="material-icons text-5xl mb-3">directions_car</span>
+                        <span>Encontre um 0 KM</span>
+                        <button class="mt-4 font-semibold bg-red-600 text-white p-3 rounded transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Pesquisar</button>
+                    </div>
+
+                    <div class="flex flex-col p-4">
+                        <span class="material-icons text-5xl mb-3">car_repair</span>
+                        <span>Encontre assistencia</span>
+                        <button class="mt-4 font-semibold bg-red-600 text-white p-3 rounded transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Pesquisar</button>
+                    </div>
+
+                    <div class="flex flex-col p-4">
+                        <span class="material-icons text-5xl mb-3">electric_car</span>
+                        <span>Encontre um eletrico</span>
+                        <button class="mt-4 font-semibold bg-red-600 text-white p-3 rounded transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modelos -->
+        <div class="mt-16 w-screen relative mb-20">
+
+            <div class="relative w-full max-w-full">
+                <img src="./assets/gt3-banner.jpg" class="block w-full h-auto" alt="">
+            
+                <div class="absolute top-0 left-0 flex items-center content-center w-full h-full custom-gradient">
+                    
+                    <div class="flex flex-col px-8 sm:px-16 text-white">
+                        <span class="text-x sm:text-4xl font-bold">Porsche 911</span>
+                        <span class="text-sm sm:text-2xl font-semibold">Desempenho incomparável</span>
+                        <button class="p-1 sm:p-4 font-semibold mt-2 rounded bg-red-600 transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Saiba mais</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-full mt-16">
+                <img src="./assets/918-banner.jpg" class="block w-full h-auto" alt="">
+            
+                <div class="absolute top-0 left-0 flex items-center content-center w-full h-full custom-gradient">
+                    
+                    <div class="flex flex-col px-8 sm:px-16 text-white">
+                        <span class="text-x sm:text-4xl font-bold">Porsche 918</span>
+                        <span class="text-sm sm:text-2xl font-semibold">Superesportivo de dar inveja</span>
+                        <button class="p-1 sm:p-4 font-semibold mt-2 rounded bg-red-600 transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Saiba mais</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-full mt-16">
+                <img src="./assets/eletric-banner.jpg" class="block w-full h-auto" alt="">
+            
+                <div class="absolute top-0 left-0 flex items-center content-center w-full h-full custom-gradient">
+                    
+                    <div class="flex flex-col px-8 sm:px-16 text-white">
+                        <span class="text-x sm:text-4xl font-bold">Eletricos</span>
+                        <span class="text-sm sm:text-2xl font-semibold">Os melhores Super-Eletricos</span>
+                        <button class="p-1 sm:p-4 font-semibold mt-2 rounded bg-red-600 transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Saiba mais</button>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="bg-white py-6">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+            <span class="font-bold text-2xl text-gray-900 sm:text-3xl">Deseja receber atualizações das <br> novidades de nossos novos carros?</span>
+            <form class="mt-6">
+                <div class="relative max-w-lg mx-auto"> 
+                    
+                    <input class="w-full rounded-full p-4 pe-32 border-gray-200 bg-gray-100 text-sm font-medium outline-none" type="email" id="email" placeholder="email@ifpb.edu.br">
+                
+                    <button class="absolute end-1 top-1/2 -translate-y-1/2 bg-red-600 text-white px-5 py-3 rounded-full transition-shadow duration-300 ease-in-out shadow-none hover:shadow-[0_0_0_2px_#dc2626]">Inscrever-se</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="flex flex-col md:flex-row mt-16 gap-8 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+
+            <div class="flex flex-col mx-auto">
+                <span class="font-semibold text-xl">Sobre Nós</span>
+                
+                <ul class="mt-2">
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Historia da Empresa</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Sobre o Time</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Carreiras</a></li>
+                </ul>
+
+            </div>
+
+            <div class="flex flex-col mx-auto">
+                <span class="font-semibold text-xl">Nossos Serviços</span>
+
+                <ul class="mt-2">
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Aluguel</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Banners</a></li>
+                </ul>
+                
+            </div>
+
+            <div class="flex flex-col mx-auto">
+                <span class="font-semibold text-xl">Recursos</span>
+                
+                <ul class="mt-2">
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Guias</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Manuais</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Forum</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Downloads</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Eventos</a></li>
+                </ul>
+
+            </div>
+
+            <div class="flex flex-col mx-auto">
+                <span class="font-semibold text-xl">Links</span>
+                
+                <ul class="mt-2">
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Github</a></li>
+                    <li><a class="text-gray-700 transition hover:text-gray-700/75" href="#">Suporte</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <hr class="mt-4 mb-4">
+
+        <span class="text-start font-semibold ps-4">Copyright © 2024. All rights reserved.</span>
+    </footer>
+</body>
+</html>
