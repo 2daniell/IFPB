@@ -1,0 +1,5 @@
+<div class="space-y-3 min-h-[200px] p-3 bg-white rounded shadow-sm">
+    @for (task of tasks; track task.id) {
+        <task [task]="task"></task>
+    }
+</div>

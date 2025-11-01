@@ -1,0 +1,21 @@
+<header class="mb-6">
+      <h1 class="text-3xl font-bold text-slate-800">Gerenciador de Tarefas - Estudos</h1>
+      <p class="text-slate-600 mt-1">Cards em 3 colunas: Para fazer, Em andamento, Concluídas.</p>
+    </header>
+
+<div class="mb-6 flex items-center justify-between">
+  <div>
+    <p class="text-slate-600">Adicione novas tarefas pelo botão <span class="font-semibold">+</span>.</p>
+  </div>
+  <div>
+    <button 
+      (click)="modalService.open()"
+      class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center text-2xl hover:bg-indigo-700">+</button>
+  </div>
+</div>
+
+<task-container></task-container>
+
+@if (modalService.isOpen()) {
+  <task-modal></task-modal>
+}

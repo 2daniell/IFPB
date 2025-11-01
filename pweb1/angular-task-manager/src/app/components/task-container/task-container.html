@@ -1,0 +1,14 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+        <h2 class="font-semibold mb-2">Para fazer</h2>
+        <task-column [tasks]="getTasksByStatus('todo')"></task-column>
+    </div>
+    <div>
+        <h2 class="font-semibold mb-2">Em andamento</h2>
+        <task-column [tasks]="getTasksByStatus('in-progress')"></task-column>
+    </div>
+    <div>
+        <h2 class="font-semibold mb-2">Concluídas</h2>
+        <task-column [tasks]="getTasksByStatus('done')"></task-column>
+    </div>
+</div>
